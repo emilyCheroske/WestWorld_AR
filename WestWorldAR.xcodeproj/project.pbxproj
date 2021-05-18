@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		9972EE7226535AAE00961C10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9972EE7026535AAE00961C10 /* Main.storyboard */; };
 		9972EE7426535AAE00961C10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9972EE7326535AAE00961C10 /* Assets.xcassets */; };
 		9972EE7726535AAE00961C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9972EE7526535AAE00961C10 /* LaunchScreen.storyboard */; };
+		9972EE8026535BE100961C10 /* ArcGIS in Frameworks */ = {isa = PBXBuildFile; productRef = 9972EE7F26535BE100961C10 /* ArcGIS */; };
+		9972EE8326535BEF00961C10 /* ArcGISToolkit in Frameworks */ = {isa = PBXBuildFile; productRef = 9972EE8226535BEF00961C10 /* ArcGISToolkit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9972EE8326535BEF00961C10 /* ArcGISToolkit in Frameworks */,
+				9972EE8026535BE100961C10 /* ArcGIS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = WestWorldAR;
+			packageProductDependencies = (
+				9972EE7F26535BE100961C10 /* ArcGIS */,
+				9972EE8226535BEF00961C10 /* ArcGISToolkit */,
+			);
 			productName = WestWorldAR;
 			productReference = 9972EE6726535AAE00961C10 /* WestWorldAR.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,10 @@
 				Base,
 			);
 			mainGroup = 9972EE5E26535AAE00961C10;
+			packageReferences = (
+				9972EE7E26535BE100961C10 /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */,
+				9972EE8126535BEF00961C10 /* XCRemoteSwiftPackageReference "arcgis-runtime-toolkit-ios" */,
+			);
 			productRefGroup = 9972EE6826535AAE00961C10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +353,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9972EE7E26535BE100961C10 /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/esri/arcgis-runtime-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 100.11.1;
+			};
+		};
+		9972EE8126535BEF00961C10 /* XCRemoteSwiftPackageReference "arcgis-runtime-toolkit-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Esri/arcgis-runtime-toolkit-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 100.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9972EE7F26535BE100961C10 /* ArcGIS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9972EE7E26535BE100961C10 /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */;
+			productName = ArcGIS;
+		};
+		9972EE8226535BEF00961C10 /* ArcGISToolkit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9972EE8126535BEF00961C10 /* XCRemoteSwiftPackageReference "arcgis-runtime-toolkit-ios" */;
+			productName = ArcGISToolkit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9972EE5F26535AAE00961C10 /* Project object */;
 }
